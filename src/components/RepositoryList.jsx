@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar } from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import RepositoryItem from './RepositoryItem';
 
 const repositories = [
