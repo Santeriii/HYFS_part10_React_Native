@@ -10,9 +10,21 @@ const styles = StyleSheet.create({
   },
 });
 
+const myToUpperCase = function(str) { 
+  var ret = ""; 
+  var i;
+
+  for(i = 0; i < str.length; i++) {
+    ret += String.fromCharCode(str.charCodeAt(i) & 223); 
+  }
+
+  return ret; 
+} 
+
 const Main = () => {
   return (
     <View style={styles.container}>
+      {console.log(myToUpperCase('pekka'))}
       <AppBar />
       <RepositoryList />
     </View>

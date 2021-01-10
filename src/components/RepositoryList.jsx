@@ -54,11 +54,12 @@ const ItemSeparator = () => <View style={styles.separator} />;
 const RepositoryList = () => {
 
   const renderItem = ({ item }) => (
-    <RepositoryItem name={item.fullName} description={item.description} language={item.language} stars={item.stargazersCount} forks={item.forksCount} reviews={item.reviewCount} rating={item.ratingAverage} />
+    <RepositoryItem name={item.fullName} image={item.ownerAvatarUrl} description={item.description} language={item.language} stars={item.stargazersCount} forks={item.forksCount} reviews={item.reviewCount} rating={item.ratingAverage} />
   );
 
   return (
       <FlatList
+      style={styles.background}
         data={repositories}
         renderItem={renderItem}
         ItemSeparatorComponent={ItemSeparator}
@@ -68,6 +69,9 @@ const RepositoryList = () => {
 };
 
 const styles = StyleSheet.create({
+  background: {
+    backgroundColor: 'lightgrey',
+  },
   separator: {
     height: 10,
   },
